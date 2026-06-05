@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services offered by John Doe - Web Development, Design, SEO">
+    <title>John Doe | Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', system-ui, sans-serif; }
+        .nav-link.active { color: #3b82f6; border-bottom: 2px solid #3b82f6; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<header class="fixed top-0 w-full bg-white/90 backdrop-blur shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-gray-900 font-heading">John<span class="text-blue-600">Doe</span></a>
+            <nav class="hidden lg:flex gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="about.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">About</a>
+                <a href="portfolio.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Portfolio</a>
+                <a href="services.html" class="nav-link active text-sm font-medium pb-1">Services</a>
+                <a href="contact.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t">
+            <a href="index.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Home</a>
+            <a href="about.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">About</a>
+            <a href="portfolio.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Portfolio</a>
+            <a href="services.html" class="block px-3 py-2 rounded text-blue-600 font-medium">Services</a>
+            <a href="contact.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="pt-24 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="text-blue-600 font-semibold text-sm uppercase">Services</span>
+            <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2 underline decoration-blue-500 decoration-2 underline-offset-8">What I Offer</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-1 transition text-center">
+                <div class="w-16 h-16 mx-auto bg-blue-100 rounded-2xl flex items-center justify-center"><i class="fas fa-laptop-code text-blue-600 text-2xl"></i></div>
+                <h3 class="font-bold text-gray-900 mt-4">Web Development</h3>
+                <p class="text-gray-500 text-sm mt-2">Custom websites and web applications with modern tech stack.</p>
+                <span class="text-blue-600 font-bold mt-3 block">From $999</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-1 transition text-center">
+                <div class="w-16 h-16 mx-auto bg-purple-100 rounded-2xl flex items-center justify-center"><i class="fas fa-palette text-purple-600 text-2xl"></i></div>
+                <h3 class="font-bold text-gray-900 mt-4">UI/UX Design</h3>
+                <p class="text-gray-500 text-sm mt-2">User-centered design for engaging interfaces.</p>
+                <span class="text-blue-600 font-bold mt-3 block">From $799</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-1 transition text-center">
+                <div class="w-16 h-16 mx-auto bg-green-100 rounded-2xl flex items-center justify-center"><i class="fas fa-mobile-screen text-green-600 text-2xl"></i></div>
+                <h3 class="font-bold text-gray-900 mt-4">Mobile Apps</h3>
+                <p class="text-gray-500 text-sm mt-2">Cross-platform apps for iOS and Android.</p>
+                <span class="text-blue-600 font-bold mt-3 block">From $1,499</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-1 transition text-center">
+                <div class="w-16 h-16 mx-auto bg-orange-100 rounded-2xl flex items-center justify-center"><i class="fas fa-magnifying-glass-chart text-orange-500 text-2xl"></i></div>
+                <h3 class="font-bold text-gray-900 mt-4">SEO Optimization</h3>
+                <p class="text-gray-500 text-sm mt-2">Boost visibility with comprehensive SEO strategies.</p>
+                <span class="text-blue-600 font-bold mt-3 block">From $499</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-1 transition text-center">
+                <div class="w-16 h-16 mx-auto bg-red-100 rounded-2xl flex items-center justify-center"><i class="fas fa-cloud text-red-500 text-2xl"></i></div>
+                <h3 class="font-bold text-gray-900 mt-4">Cloud & DevOps</h3>
+                <p class="text-gray-500 text-sm mt-2">Infrastructure setup, CI/CD, and deployment automation.</p>
+                <span class="text-blue-600 font-bold mt-3 block">From $1,199</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-1 transition text-center">
+                <div class="w-16 h-16 mx-auto bg-teal-100 rounded-2xl flex items-center justify-center"><i class="fas fa-headset text-teal-600 text-2xl"></i></div>
+                <h3 class="font-bold text-gray-900 mt-4">Consulting & Support</h3>
+                <p class="text-gray-500 text-sm mt-2">Expert technical consulting and ongoing support.</p>
+                <span class="text-blue-600 font-bold mt-3 block">From $150/hr</span>
+            </div>
+        </div>
+
+        <!-- Client Stats -->
+        <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="bg-white p-6 rounded-xl shadow text-center"><span class="text-4xl font-extrabold text-blue-600">150+</span><p class="text-gray-500 text-sm">Projects Completed</p></div>
+            <div class="bg-white p-6 rounded-xl shadow text-center"><span class="text-4xl font-extrabold text-blue-600">80+</span><p class="text-gray-500 text-sm">Happy Clients</p></div>
+            <div class="bg-white p-6 rounded-xl shadow text-center"><span class="text-4xl font-extrabold text-blue-600">12</span><p class="text-gray-500 text-sm">Years Experience</p></div>
+            <div class="bg-white p-6 rounded-xl shadow text-center"><span class="text-4xl font-extrabold text-blue-600">25+</span><p class="text-gray-500 text-sm">Awards Won</p></div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+        <p>&copy; <span id="currentYear"></span> John Doe. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Dynamic year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

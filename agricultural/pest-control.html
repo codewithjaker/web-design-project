@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Integrated pest management strategies, biological controls, and organic remedies for sustainable agriculture.">
+    <title>Agricultural Information Hub | Pest Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #f5f5f0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif; }
+        .nav-link.active { color: #2d6a4f; border-bottom: 2px solid #2d6a4f; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-md z-50 border-b-4 border-green-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-seedling text-green-700 text-2xl"></i> Agri Info Hub</a>
+            <nav class="hidden lg:flex gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Home</a>
+                <a href="guides.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Farming Guides</a>
+                <a href="crops.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Crop Details</a>
+                <a href="pest-control.html" class="nav-link active text-sm font-semibold pb-1">Pest Control</a>
+                <a href="contact.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t">
+            <a href="index.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Home</a>
+            <a href="guides.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Farming Guides</a>
+            <a href="crops.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Crop Details</a>
+            <a href="pest-control.html" class="block px-3 py-2 rounded text-green-700 font-medium">Pest Control</a>
+            <a href="contact.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Pest Control Strategies</h1>
+        <p class="text-gray-600 mb-8">Integrated Pest Management (IPM) with biological, mechanical, and organic controls.</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-l-4 border-green-600">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-bug text-green-700 text-2xl"></i>
+                    <h3 class="text-xl font-bold">Biological Control</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Using natural predators like ladybugs, lacewings, and parasitic wasps to control aphids, mites, and caterpillars.</p>
+                <ul class="mt-3 list-disc list-inside text-sm text-gray-500 space-y-1">
+                    <li>Release Trichogramma for stem borer</li>
+                    <li>Use neem oil as repellent</li>
+                    <li>Encourage beneficial insects</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-l-4 border-yellow-600">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-leaf text-yellow-700 text-2xl"></i>
+                    <h3 class="text-xl font-bold">Organic Remedies</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Homemade sprays and traps: garlic-chili extract, soap water, pheromone traps for fruit flies.</p>
+                <ul class="mt-3 list-disc list-inside text-sm text-gray-500 space-y-1">
+                    <li>Neem kernel extract</li>
+                    <li>Garlic-pepper spray</li>
+                    <li>Sticky traps</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-l-4 border-red-600">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-tint text-red-700 text-2xl"></i>
+                    <h3 class="text-xl font-bold">Chemical Control</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Safe and targeted pesticides as last resort, following recommended dosage and safety periods.</p>
+                <ul class="mt-3 list-disc list-inside text-sm text-gray-500 space-y-1">
+                    <li>Carbofuran for soil pests</li>
+                    <li>Cypermethrin for bollworm</li>
+                    <li>Always use PPE</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-l-4 border-indigo-600">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-eye text-indigo-700 text-2xl"></i>
+                    <h3 class="text-xl font-bold">Monitoring & Detection</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Regular field scouting, yellow pan traps, and light traps to identify pest population thresholds.</p>
+                <ul class="mt-3 list-disc list-inside text-sm text-gray-500 space-y-1">
+                    <li>Check leaf undersides</li>
+                    <li>Count insects per plant</li>
+                    <li>Economic threshold level</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-l-4 border-teal-600">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-crop text-teal-700 text-2xl"></i>
+                    <h3 class="text-xl font-bold">Cultural Practices</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Crop rotation, intercropping, resistant varieties, and proper spacing to reduce pest outbreaks.</p>
+                <ul class="mt-3 list-disc list-inside text-sm text-gray-500 space-y-1">
+                    <li>Rotate rice with legumes</li>
+                    <li>Plant marigold as repellent</li>
+                    <li>Use certified seeds</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-10 border-t-4 border-green-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+        <p>&copy; <span id="currentYear"></span> Agricultural Information Hub. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

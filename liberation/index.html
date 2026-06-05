@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liberation War Archive - Preserving the history and memories of Bangladesh's Liberation War 1971. Documents, interviews, photographs.">
+    <meta name="keywords" content="Liberation War, Bangladesh 1971, archive, documents, interviews, photographs, history">
+    <title>Liberation War Archive | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #f5f0eb; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif; }
+        .nav-link.active { color: #b91c1c; border-bottom: 2px solid #b91c1c; }
+        .flag-green { color: #006a4e; }
+        .flag-red { color: #da291c; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+<!-- Navigation -->
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-md z-50 border-b-4 border-red-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-gray-900 font-heading flex items-center gap-2">
+                <span class="text-red-700 text-2xl">✶</span> Liberation War Archive
+            </a>
+            <nav class="hidden lg:flex gap-8">
+                <a href="index.html" class="nav-link active text-sm font-semibold pb-1">Home</a>
+                <a href="documents.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Documents</a>
+                <a href="interviews.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Interviews</a>
+                <a href="gallery.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Gallery</a>
+                <a href="contact.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t border-gray-200">
+            <a href="index.html" class="block px-3 py-2 rounded text-red-700 font-medium">Home</a>
+            <a href="documents.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Documents</a>
+            <a href="interviews.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Interviews</a>
+            <a href="gallery.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Gallery</a>
+            <a href="contact.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Contact</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="pt-24 pb-12 bg-gradient-to-b from-red-700 to-red-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Preserving the Spirit of 1971</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-red-100">An open archive dedicated to the memories, documents, and voices of the Bangladesh Liberation War. Explore the history that shaped a nation.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="documents.html" class="bg-white text-red-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">Browse Documents</a>
+            <a href="interviews.html" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-700 transition">Listen to Stories</a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Sections -->
+<section class="py-16 bg-amber-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Featured Collections</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-1 transition">
+                <div class="h-48 bg-red-100 flex items-center justify-center text-red-700 text-6xl"><i class="fas fa-file-alt"></i></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Key Documents</h3>
+                    <p class="text-gray-600 text-sm">Treaties, declarations, and official correspondence from 1971.</p>
+                    <a href="documents.html" class="inline-block mt-4 text-red-700 font-semibold hover:underline">Explore →</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-1 transition">
+                <div class="h-48 bg-green-100 flex items-center justify-center text-green-700 text-6xl"><i class="fas fa-microphone"></i></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Oral Histories</h3>
+                    <p class="text-gray-600 text-sm">Recorded interviews with freedom fighters, survivors, and witnesses.</p>
+                    <a href="interviews.html" class="inline-block mt-4 text-red-700 font-semibold hover:underline">Listen →</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-1 transition">
+                <div class="h-48 bg-amber-100 flex items-center justify-center text-amber-700 text-6xl"><i class="fas fa-images"></i></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Rare Photographs</h3>
+                    <p class="text-gray-600 text-sm">Curated images capturing key moments and faces of the war.</p>
+                    <a href="gallery.html" class="inline-block mt-4 text-red-700 font-semibold hover:underline">View Gallery →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-10 border-t-4 border-red-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+        <p>&copy; <span id="currentYear"></span> Liberation War Archive. All rights reserved.</p>
+        <p class="mt-1">Preserving history for future generations.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

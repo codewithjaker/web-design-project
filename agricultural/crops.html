@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive crop information - grains, fruits, vegetables, cash crops with cultivation methods, soil requirements, and images.">
+    <title>Agricultural Information Hub | Crop Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #f5f5f0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif; }
+        .nav-link.active { color: #2d6a4f; border-bottom: 2px solid #2d6a4f; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-md z-50 border-b-4 border-green-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-seedling text-green-700 text-2xl"></i> Agri Info Hub</a>
+            <nav class="hidden lg:flex gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Home</a>
+                <a href="guides.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Farming Guides</a>
+                <a href="crops.html" class="nav-link active text-sm font-semibold pb-1">Crop Details</a>
+                <a href="pest-control.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Pest Control</a>
+                <a href="contact.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t">
+            <a href="index.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Home</a>
+            <a href="guides.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Farming Guides</a>
+            <a href="crops.html" class="block px-3 py-2 rounded text-green-700 font-medium">Crop Details</a>
+            <a href="pest-control.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Pest Control</a>
+            <a href="contact.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Crop Details</h1>
+        <p class="text-gray-600 mb-8">Detailed information on grains, fruits, vegetables, and cash crops.</p>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap gap-3 mb-8">
+            <button onclick="filterCrops('all')" class="px-5 py-2 bg-green-700 text-white rounded-full text-sm font-semibold">All</button>
+            <button onclick="filterCrops('grains')" class="px-5 py-2 bg-gray-200 rounded-full text-sm hover:bg-gray-300 transition">Grains</button>
+            <button onclick="filterCrops('fruits')" class="px-5 py-2 bg-gray-200 rounded-full text-sm hover:bg-gray-300 transition">Fruits</button>
+            <button onclick="filterCrops('vegetables')" class="px-5 py-2 bg-gray-200 rounded-full text-sm hover:bg-gray-300 transition">Vegetables</button>
+            <button onclick="filterCrops('cash-crops')" class="px-5 py-2 bg-gray-200 rounded-full text-sm hover:bg-gray-300 transition">Cash Crops</button>
+        </div>
+
+        <div id="cropsContainer" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-10 border-t-4 border-green-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+        <p>&copy; <span id="currentYear"></span> Agricultural Information Hub. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    const crops = [
+        { name: 'Rice (BRRI Dhan-28)', category: 'grains', image: 'https://picsum.photos/id/126/300/200', soil: 'Loamy, clay', duration: '140-145 days', nutrition: 'Carbohydrate, protein', use: 'Staple food' },
+        { name: 'Wheat', category: 'grains', image: 'https://picsum.photos/id/128/300/200', soil: 'Well-drained loam', duration: '100-120 days', nutrition: 'Carbohydrate, gluten', use: 'Flour, bread' },
+        { name: 'Mango (Amrapali)', category: 'fruits', image: 'https://picsum.photos/id/133/300/200', soil: 'Deep sandy loam', duration: 'Perennial', nutrition: 'Vitamin A, C', use: 'Fresh, juice, pickle' },
+        { name: 'Banana', category: 'fruits', image: 'https://picsum.photos/id/135/300/200', soil: 'Rich loamy', duration: '12-15 months', nutrition: 'Potassium', use: 'Fresh, chips' },
+        { name: 'Tomato', category: 'vegetables', image: 'https://picsum.photos/id/139/300/200', soil: 'Well-drained sandy loam', duration: '80-90 days', nutrition: 'Vitamin C, lycopene', use: 'Salad, cooking' },
+        { name: 'Jute', category: 'cash-crops', image: 'https://picsum.photos/id/144/300/200', soil: 'Silty loam', duration: '120-150 days', nutrition: 'Fiber', use: 'Sack, rope' },
+    ];
+
+    function renderCrops(filter = 'all') {
+        const container = document.getElementById('cropsContainer');
+        const filtered = filter === 'all' ? crops : crops.filter(c => c.category === filter);
+        container.innerHTML = filtered.map(crop => `
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <img src="${crop.image}" alt="${crop.name}" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <span class="text-xs uppercase bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">${crop.category}</span>
+                    <h3 class="text-xl font-bold mt-2 text-gray-900">${crop.name}</h3>
+                    <div class="mt-3 space-y-1 text-sm text-gray-600">
+                        <p><i class="fas fa-globe-asia text-green-600 w-5"></i> <strong>Soil:</strong> ${crop.soil}</p>
+                        <p><i class="far fa-clock text-green-600 w-5"></i> <strong>Duration:</strong> ${crop.duration}</p>
+                        <p><i class="fas fa-apple-alt text-green-600 w-5"></i> <strong>Nutrition:</strong> ${crop.nutrition}</p>
+                        <p><i class="fas fa-tag text-green-600 w-5"></i> <strong>Use:</strong> ${crop.use}</p>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function filterCrops(cat) {
+        renderCrops(cat);
+    }
+
+    renderCrops();
+</script>
+</body>
+</html>

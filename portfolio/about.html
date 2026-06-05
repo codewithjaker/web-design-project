@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About John Doe - Web Developer & Designer">
+    <title>John Doe | About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', system-ui, sans-serif; }
+        .nav-link.active { color: #3b82f6; border-bottom: 2px solid #3b82f6; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<header class="fixed top-0 w-full bg-white/90 backdrop-blur shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-gray-900 font-heading">John<span class="text-blue-600">Doe</span></a>
+            <nav class="hidden lg:flex gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="about.html" class="nav-link active text-sm font-medium pb-1">About</a>
+                <a href="portfolio.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Portfolio</a>
+                <a href="services.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Services</a>
+                <a href="contact.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t">
+            <a href="index.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Home</a>
+            <a href="about.html" class="block px-3 py-2 rounded text-blue-600 font-medium">About</a>
+            <a href="portfolio.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Portfolio</a>
+            <a href="services.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Services</a>
+            <a href="contact.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Contact</a>
+        </div>
+    </div>
+</header>
+
+<!-- About Content -->
+<section class="pt-24 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="text-blue-600 font-semibold text-sm uppercase">About Me</span>
+            <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2 underline decoration-blue-500 decoration-2 underline-offset-8">Get To Know Me</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Personal Biography</h3>
+                <p class="text-gray-600 leading-relaxed mb-3">I'm John Doe, a full-stack web developer and UI/UX designer based in New York with over 8 years of experience. I specialize in modern, scalable web applications using React, Node.js, and Tailwind CSS.</p>
+                <p class="text-gray-600 leading-relaxed mb-3">My journey started with a deep curiosity about how the web works. Since then, I've worked with startups, agencies, and enterprises to bring digital visions to life.</p>
+                <p class="text-gray-600 leading-relaxed">When not coding, I enjoy contributing to open-source projects and mentoring aspiring developers.</p>
+                <div class="mt-6 space-y-2 text-sm text-gray-600">
+                    <div><i class="fas fa-map-marker-alt text-blue-600 w-5"></i> New York, USA</div>
+                    <div><i class="fas fa-envelope text-blue-600 w-5"></i> john@example.com</div>
+                    <div><i class="fas fa-phone text-blue-600 w-5"></i> +1 (555) 123-4567</div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Skills</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm font-medium"><span>HTML5 & CSS3</span><span class="text-blue-600">95%</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-1"><div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2 rounded-full" style="width: 95%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-medium"><span>JavaScript (React, Vue)</span><span class="text-blue-600">90%</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-1"><div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2 rounded-full" style="width: 90%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-medium"><span>Node.js & Express</span><span class="text-blue-600">85%</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-1"><div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2 rounded-full" style="width: 85%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-medium"><span>UI/UX Design (Figma)</span><span class="text-blue-600">88%</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-1"><div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2 rounded-full" style="width: 88%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-medium"><span>Database (MongoDB, PostgreSQL)</span><span class="text-blue-600">82%</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-1"><div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2 rounded-full" style="width: 82%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Existing Clients -->
+        <div class="mt-16">
+            <h3 class="text-2xl font-bold text-center text-gray-900 mb-8 underline decoration-blue-500 decoration-2 underline-offset-8">Trusted By</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div class="bg-white p-4 rounded-xl shadow text-center text-gray-400 font-bold">TechStart</div>
+                <div class="bg-white p-4 rounded-xl shadow text-center text-gray-400 font-bold">DigitalFlow</div>
+                <div class="bg-white p-4 rounded-xl shadow text-center text-gray-400 font-bold">CloudBase</div>
+                <div class="bg-white p-4 rounded-xl shadow text-center text-gray-400 font-bold">InnovateX</div>
+                <div class="bg-white p-4 rounded-xl shadow text-center text-gray-400 font-bold">PixelPerfect</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+        <p>&copy; <span id="currentYear"></span> John Doe. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Dynamic year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

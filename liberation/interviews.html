@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oral history interviews from the Bangladesh Liberation War - voices of freedom fighters and survivors.">
+    <title>Liberation War Archive | Interviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #f5f0eb; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif; }
+        .nav-link.active { color: #b91c1c; border-bottom: 2px solid #b91c1c; }
+        audio { width: 100%; margin-top: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-md z-50 border-b-4 border-red-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-gray-900 font-heading flex items-center gap-2"><span class="text-red-700 text-2xl">✶</span> Liberation War Archive</a>
+            <nav class="hidden lg:flex gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Home</a>
+                <a href="documents.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Documents</a>
+                <a href="interviews.html" class="nav-link active text-sm font-semibold pb-1">Interviews</a>
+                <a href="gallery.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Gallery</a>
+                <a href="contact.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t">
+            <a href="index.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Home</a>
+            <a href="documents.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Documents</a>
+            <a href="interviews.html" class="block px-3 py-2 rounded text-red-700 font-medium">Interviews</a>
+            <a href="gallery.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Gallery</a>
+            <a href="contact.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Oral History Interviews</h1>
+        <p class="text-gray-600 mb-8">Voices of those who witnessed and shaped the Liberation War.</p>
+
+        <div class="grid gap-8 lg:grid-cols-2">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center text-red-700 text-2xl font-bold">AR</div>
+                    <div>
+                        <h3 class="text-xl font-bold">Abdur Rahman</h3>
+                        <p class="text-sm text-gray-500">Freedom Fighter, Sector 2</p>
+                        <p class="mt-2 text-gray-700">Recounts the guerrilla warfare in Dhaka and the final push in December 1971.</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h4 class="font-semibold text-sm">Listen to excerpt:</h4>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                    <p class="text-xs text-gray-400 mt-1">* Placeholder audio – replace with actual interview.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-700 text-2xl font-bold">FB</div>
+                    <div>
+                        <h3 class="text-xl font-bold">Fatema Begum</h3>
+                        <p class="text-sm text-gray-500">Survivor, Rajshahi</p>
+                        <p class="mt-2 text-gray-700">Describes the life in refugee camps and the loss of her family during the war.</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h4 class="font-semibold text-sm">Watch interview:</h4>
+                    <div class="aspect-w-16 aspect-h-9 mt-2">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Interview" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">* Placeholder video.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-10 border-t-4 border-red-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+        <p>&copy; <span id="currentYear"></span> Liberation War Archive. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Agricultural Information Hub - ask experts, submit inquiries, or share documents.">
+    <title>Agricultural Information Hub | Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #f5f5f0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif; }
+        .nav-link.active { color: #2d6a4f; border-bottom: 2px solid #2d6a4f; }
+        .error-msg { display: none; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-md z-50 border-b-4 border-green-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-seedling text-green-700 text-2xl"></i> Agri Info Hub</a>
+            <nav class="hidden lg:flex gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Home</a>
+                <a href="guides.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Farming Guides</a>
+                <a href="crops.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Crop Details</a>
+                <a href="pest-control.html" class="nav-link text-sm font-medium text-gray-700 hover:text-green-700 transition">Pest Control</a>
+                <a href="contact.html" class="nav-link active text-sm font-semibold pb-1">Contact</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t">
+            <a href="index.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Home</a>
+            <a href="guides.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Farming Guides</a>
+            <a href="crops.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Crop Details</a>
+            <a href="pest-control.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-green-50">Pest Control</a>
+            <a href="contact.html" class="block px-3 py-2 rounded text-green-700 font-medium">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Contact Agricultural Experts</h1>
+        <p class="text-gray-600 mb-8">Ask questions, share your farming experiences, or request advice.</p>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <div class="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt text-green-700 text-xl"></i>
+                    <div><h4 class="font-semibold">Address</h4><p class="text-xs text-gray-500">Agri Extension Office, Dhaka-1215</p></div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                    <i class="fas fa-envelope text-green-700 text-xl"></i>
+                    <div><h4 class="font-semibold">Email</h4><p class="text-xs text-gray-500">info@agrihub.org</p></div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow flex items-center gap-3">
+                    <i class="fas fa-phone text-green-700 text-xl"></i>
+                    <div><h4 class="font-semibold">Helpline</h4><p class="text-xs text-gray-500">16123 (Toll-Free)</p></div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow">
+                <h3 class="text-xl font-bold mb-5">Send Your Inquiry</h3>
+                <form id="contactForm" novalidate class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Full Name *</label>
+                            <input type="text" id="name" required placeholder="Your name" class="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:border-green-700 focus:ring-1 focus:ring-green-200 outline-none">
+                            <p class="text-red-600 text-xs mt-1 error-msg" id="nameError">Please enter your name.</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Email *</label>
+                            <input type="email" id="email" required placeholder="you@example.com" class="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:border-green-700 focus:ring-1 focus:ring-green-200 outline-none">
+                            <p class="text-red-600 text-xs mt-1 error-msg" id="emailError">Valid email required.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Subject / Expertise Area *</label>
+                        <input type="text" id="subject" required placeholder="E.g., Rice pest control" class="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:border-green-700 focus:ring-1 focus:ring-green-200 outline-none">
+                        <p class="text-red-600 text-xs mt-1 error-msg" id="subjectError">Please enter a subject.</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Message *</label>
+                        <textarea id="message" required rows="4" placeholder="Describe your issue or question..." class="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:border-green-700 focus:ring-1 focus:ring-green-200 outline-none resize-none"></textarea>
+                        <p class="text-red-600 text-xs mt-1 error-msg" id="messageError">Message cannot be empty.</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Attach Image or Document (optional)</label>
+                        <input type="file" id="fileUpload" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100">
+                    </div>
+                    <button type="submit" class="bg-green-700 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-800 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-10 border-t-4 border-green-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+        <p>&copy; <span id="currentYear"></span> Agricultural Information Hub. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let valid = true;
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const fileInput = document.getElementById('fileUpload');
+        const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file';
+
+        if (!name) { document.getElementById('nameError').style.display = 'block'; valid = false; }
+        else { document.getElementById('nameError').style.display = 'none'; }
+
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { 
+            document.getElementById('emailError').style.display = 'block'; valid = false; 
+        } else { document.getElementById('emailError').style.display = 'none'; }
+
+        if (!subject) { document.getElementById('subjectError').style.display = 'block'; valid = false; }
+        else { document.getElementById('subjectError').style.display = 'none'; }
+
+        if (!message) { document.getElementById('messageError').style.display = 'block'; valid = false; }
+        else { document.getElementById('messageError').style.display = 'none'; }
+
+        if (valid) {
+            const alertText = `Inquiry Submitted Successfully!\n\n` +
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Subject: ${subject}\n` +
+                `Message: ${message}\n` +
+                `Attached File: ${fileName}`;
+            alert(alertText);
+            form.reset();
+            document.querySelectorAll('.error-msg').forEach(el => el.style.display = 'none');
+        }
+    });
+</script>
+</body>
+</html>

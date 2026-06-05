@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Historical photographs from the Bangladesh Liberation War - gallery of key moments.">
+    <title>Liberation War Archive | Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #f5f0eb; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif; }
+        .nav-link.active { color: #b91c1c; border-bottom: 2px solid #b91c1c; }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); }
+        .modal-content { margin: auto; display: block; max-width: 90%; max-height: 80vh; }
+        .close { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer; }
+        .download-btn { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: white; color: black; padding: 8px 20px; border-radius: 20px; font-weight: bold; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-md z-50 border-b-4 border-red-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold text-gray-900 font-heading flex items-center gap-2"><span class="text-red-700 text-2xl">✶</span> Liberation War Archive</a>
+            <nav class="hidden lg:flex gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Home</a>
+                <a href="documents.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Documents</a>
+                <a href="interviews.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Interviews</a>
+                <a href="gallery.html" class="nav-link active text-sm font-semibold pb-1">Gallery</a>
+                <a href="contact.html" class="nav-link text-sm font-medium text-gray-700 hover:text-red-700 transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t">
+            <a href="index.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Home</a>
+            <a href="documents.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Documents</a>
+            <a href="interviews.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Interviews</a>
+            <a href="gallery.html" class="block px-3 py-2 rounded text-red-700 font-medium">Gallery</a>
+            <a href="contact.html" class="block px-3 py-2 rounded text-gray-700 hover:bg-red-50">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Photograph Gallery</h1>
+        <p class="text-gray-600 mb-8">A visual journey through the moments that defined a nation.</p>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap gap-3 mb-8">
+            <button onclick="filterGallery('all')" class="px-5 py-2 bg-red-700 text-white rounded-full text-sm font-semibold">All</button>
+            <button onclick="filterGallery('events')" class="px-5 py-2 bg-gray-200 rounded-full text-sm">Events</button>
+            <button onclick="filterGallery('locations')" class="px-5 py-2 bg-gray-200 rounded-full text-sm">Locations</button>
+            <button onclick="filterGallery('people')" class="px-5 py-2 bg-gray-200 rounded-full text-sm">People</button>
+        </div>
+
+        <div id="galleryGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+    </div>
+</section>
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Enlarged photograph">
+    <a id="downloadLink" href="#" download class="download-btn">Download Image</a>
+</div>
+
+<footer class="bg-gray-900 text-white py-10 border-t-4 border-red-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+        <p>&copy; <span id="currentYear"></span> Liberation War Archive. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    const photos = [
+        { src: 'https://picsum.photos/id/1015/600/400', category: 'events', caption: 'Mujibnagar Government Oath', location: 'Mujibnagar, 1971' },
+        { src: 'https://picsum.photos/id/1020/600/400', category: 'locations', caption: 'Dhaka Streets during war', location: 'Dhaka, 1971' },
+        { src: 'https://picsum.photos/id/1025/600/400', category: 'people', caption: 'Freedom Fighters', location: 'Sector 5' },
+        { src: 'https://picsum.photos/id/1035/600/400', category: 'events', caption: 'Victory Day Celebration', location: '16 Dec 1971' },
+        { src: 'https://picsum.photos/id/1040/600/400', category: 'locations', caption: 'Refugee Camp', location: 'West Bengal, 1971' },
+        { src: 'https://picsum.photos/id/1050/600/400', category: 'people', caption: 'Birangona Women', location: 'Various' }
+    ];
+
+    let currentPhotos = photos;
+    function renderGallery(filter = 'all') {
+        const grid = document.getElementById('galleryGrid');
+        const filtered = filter === 'all' ? photos : photos.filter(p => p.category === filter);
+        currentPhotos = filtered;
+        grid.innerHTML = filtered.map((photo, idx) => `
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openImageModal(${idx})">
+                <img src="${photo.src}" alt="${photo.caption}" class="w-full h-48 object-cover">
+                <div class="p-3">
+                    <p class="font-semibold text-sm">${photo.caption}</p>
+                    <p class="text-xs text-gray-500">${photo.location}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function filterGallery(cat) {
+        renderGallery(cat);
+    }
+
+    function openImageModal(idx) {
+        const photo = currentPhotos[idx];
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const downloadLink = document.getElementById('downloadLink');
+        modal.style.display = 'block';
+        modalImg.src = photo.src;
+        modalImg.alt = photo.caption;
+        downloadLink.href = photo.src;
+        downloadLink.download = 'liberation-war-photo.jpg';
+    }
+
+    function closeImageModal() {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('imageModal')) closeImageModal();
+    }
+
+    renderGallery();
+</script>
+</body>
+</html>

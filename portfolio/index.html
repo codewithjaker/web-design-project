@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Doe - Professional Web Developer & Designer Portfolio">
+    <title>John Doe | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', system-ui, sans-serif;
+        }
+
+        .nav-link.active {
+            color: #3b82f6;
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-xl font-bold text-gray-900 font-heading">John<span
+                        class="text-blue-600">Doe</span></a>
+                <nav class="hidden lg:flex gap-8">
+                    <a href="index.html" class="nav-link active text-sm font-medium pb-1">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="portfolio.html"
+                        class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Portfolio</a>
+                    <a href="services.html"
+                        class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Services</a>
+                    <a href="contact.html"
+                        class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </nav>
+                <button id="menuBtn" class="lg:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="lg:hidden hidden flex-col gap-2 py-3 border-t">
+                <a href="index.html" class="block px-3 py-2 rounded text-blue-600 font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">About</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Portfolio</a>
+                <a href="services.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Services</a>
+                <a href="contact.html" class="block px-3 py-2 rounded text-gray-600 hover:bg-blue-50">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-white to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+                <span
+                    class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Available
+                    for Projects</span>
+                <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 font-heading leading-tight">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">John
+                        Doe</span>
+                </h1>
+                <p class="text-xl text-gray-600 mt-3">Full-Stack Web Developer & UI/UX Designer</p>
+                <p class="text-gray-500 mt-4 max-w-lg">Crafting exceptional digital experiences with modern
+                    technologies. I build responsive, user-friendly websites that drive results.</p>
+                <div class="mt-6 flex gap-3">
+                    <a href="portfolio.html"
+                        class="bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition">View
+                        Portfolio</a>
+                    <a href="contact.html"
+                        class="border-2 border-gray-300 px-6 py-3 rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 transition">Get
+                        In Touch</a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <!-- Profile image from Unsplash -->
+                <div
+                    class="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 p-1 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face&auto=format"
+                        alt="John Doe portrait" class="w-full h-full rounded-full object-cover" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 grid sm:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Career Mission</h3>
+                        <p class="text-gray-500 text-sm mt-1">To deliver innovative, high-quality digital solutions that
+                            empower businesses through cutting-edge web technologies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-eye text-cyan-500 text-2xl"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Career Vision</h3>
+                        <p class="text-gray-500 text-sm mt-1">To become a globally recognized leader in web development,
+                            shaping the future of digital interaction with creativity and integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Services List -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+            <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Core Services</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-5 rounded-xl shadow-md text-center hover:-translate-y-1 transition">
+                    <div class="w-14 h-14 mx-auto bg-blue-100 rounded-full flex items-center justify-center"><i
+                            class="fas fa-code text-blue-600 text-xl"></i></div>
+                    <h4 class="mt-3 font-semibold">Web Development</h4>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-md text-center hover:-translate-y-1 transition">
+                    <div class="w-14 h-14 mx-auto bg-purple-100 rounded-full flex items-center justify-center"><i
+                            class="fas fa-paint-brush text-purple-600 text-xl"></i></div>
+                    <h4 class="mt-3 font-semibold">UI/UX Design</h4>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-md text-center hover:-translate-y-1 transition">
+                    <div class="w-14 h-14 mx-auto bg-green-100 rounded-full flex items-center justify-center"><i
+                            class="fas fa-mobile-alt text-green-600 text-xl"></i></div>
+                    <h4 class="mt-3 font-semibold">Mobile Apps</h4>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-md text-center hover:-translate-y-1 transition">
+                    <div class="w-14 h-14 mx-auto bg-orange-100 rounded-full flex items-center justify-center"><i
+                            class="fas fa-chart-line text-orange-500 text-xl"></i></div>
+                    <h4 class="mt-3 font-semibold">SEO Optimization</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Client Feedback -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pb-12">
+            <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Client Feedback</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="text-yellow-500 mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm italic">"Outstanding work! Delivered a stunning website ahead of
+                        schedule."</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div
+                            class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">
+                            SA</div>
+                        <div>
+                            <p class="font-semibold text-sm">Sarah Ahmed</p>
+                            <p class="text-xs text-gray-400">CEO, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="text-yellow-500 mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 text-sm italic">"Professional, creative, and excellent communication."</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div
+                            class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">
+                            MK</div>
+                        <div>
+                            <p class="font-semibold text-sm">Mike Kumar</p>
+                            <p class="text-xs text-gray-400">Founder, DigitalFlow</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="text-yellow-500 mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic">"Conversion rate increased by 40% after the redesign."</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div
+                            class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">
+                            LP</div>
+                        <div>
+                            <p class="font-semibold text-sm">Lisa Park</p>
+                            <p class="text-xs text-gray-400">Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+            <p>&copy; <span id="currentYear"></span> John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function () {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Dynamic year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
