@@ -14,3 +14,6 @@
 14. CSS Flexbox - Ultimate MasterClass
 15. CSS Grid - Ultimate MasterClass
 16. CSS Transforms MasterClass
+
+
+সবাই এই Learning System এর Landing Page টা Tailwind CSS এ কাজ করে জমা দিবেন। 
