@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Table | Tailwind Practice</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for check icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <!-- Pricing Grid -->
+  <div class="grid gap-8 max-w-6xl mx-auto
+              grid-cols-1
+              md:grid-cols-3
+              items-center">
+
+    <!-- Basic Plan -->
+    <div class="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition-shadow">
+      <h3 class="text-2xl font-bold text-gray-800">Basic</h3>
+      <p class="text-gray-500 mt-2">For individuals</p>
+      <div class="mt-6 text-5xl font-extrabold text-gray-900">$19<span class="text-lg font-medium text-gray-500">/mo</span></div>
+      <ul class="mt-8 space-y-3 text-gray-700 text-left">
+        <li><i class="fas fa-check text-green-500 mr-2"></i> 5 Projects</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i> 10 GB Storage</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i> Basic Support</li>
+        <li><i class="fas fa-times text-red-400 mr-2"></i> <span class="text-gray-400">Analytics</span></li>
+      </ul>
+      <button class="mt-8 w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+        Get Started
+      </button>
+    </div>
+
+    <!-- Pro Plan (Highlighted) -->
+    <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl p-10 text-center text-white scale-105 z-10 relative
+                hover:scale-110 transition-transform duration-300">
+      <!-- Popular badge -->
+      <span class="absolute top-0 right-0 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl tracking-wider">POPULAR</span>
+      <h3 class="text-2xl font-bold">Pro</h3>
+      <p class="text-indigo-100 mt-2">For professionals</p>
+      <div class="mt-6 text-5xl font-extrabold">$49<span class="text-lg font-medium text-indigo-200">/mo</span></div>
+      <ul class="mt-8 space-y-3 text-left">
+        <li><i class="fas fa-check text-green-300 mr-2"></i> Unlimited Projects</li>
+        <li><i class="fas fa-check text-green-300 mr-2"></i> 100 GB Storage</li>
+        <li><i class="fas fa-check text-green-300 mr-2"></i> Priority Support</li>
+        <li><i class="fas fa-check text-green-300 mr-2"></i> Advanced Analytics</li>
+      </ul>
+      <button class="mt-8 w-full bg-white text-indigo-600 font-semibold py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        Get Started
+      </button>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition-shadow">
+      <h3 class="text-2xl font-bold text-gray-800">Enterprise</h3>
+      <p class="text-gray-500 mt-2">For teams</p>
+      <div class="mt-6 text-5xl font-extrabold text-gray-900">$99<span class="text-lg font-medium text-gray-500">/mo</span></div>
+      <ul class="mt-8 space-y-3 text-gray-700 text-left">
+        <li><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Projects</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i> 500 GB Storage</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i> 24/7 Support</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i> Custom Analytics</li>
+      </ul>
+      <button class="mt-8 w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+        Get Started
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>

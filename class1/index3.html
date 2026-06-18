@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar | Tailwind Practice</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 min-h-screen pt-20">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold text-indigo-600 tracking-wide">TailSite</a>
+
+      <!-- Desktop Menu (hidden on mobile, flex on md+) -->
+      <div class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+        <a href="#" class="hover:text-indigo-600 transition-colors">Home</a>
+        <a href="#" class="hover:text-indigo-600 transition-colors">About</a>
+        <a href="#" class="hover:text-indigo-600 transition-colors">Services</a>
+        <a href="#" class="hover:text-indigo-600 transition-colors">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Toggle (checkbox hack) -->
+      <div class="md:hidden">
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <label for="menu-toggle" class="cursor-pointer text-gray-700 hover:text-indigo-600 transition-colors">
+          <i class="fas fa-bars text-2xl"></i>
+        </label>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default, shown when checkbox checked) -->
+    <div class="md:hidden absolute top-full left-0 w-full bg-white shadow-md peer-checked:block hidden">
+      <div class="flex flex-col items-center space-y-4 py-6 text-gray-700 font-medium">
+        <a href="#" class="hover:text-indigo-600 transition-colors">Home</a>
+        <a href="#" class="hover:text-indigo-600 transition-colors">About</a>
+        <a href="#" class="hover:text-indigo-600 transition-colors">Services</a>
+        <a href="#" class="hover:text-indigo-600 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dummy content just to show scrolling -->
+  <div class="max-w-3xl mx-auto p-6 text-center">
+    <h1 class="text-4xl font-bold text-gray-800 mt-10">Responsive Navbar Demo</h1>
+    <p class="mt-4 text-gray-600">Scroll down & resize the browser. Hamburger menu works on mobile.</p>
+    <div class="h-96"></div>
+  </div>
+
+</body>
+</html>

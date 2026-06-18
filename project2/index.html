@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Flexbox & Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background: #0f0f1a;
+      color: #fff;
+    }
+
+    /* ===== Navbar - Flexbox ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #a78bfa;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #a78bfa;
+    }
+
+    /* ===== Hero - Flexbox ===== */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #1e1b4b, #312e81);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #c7d2fe;
+      max-width: 500px;
+    }
+
+    /* ===== Gallery - CSS Grid ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 200px 200px;
+      gap: 15px;
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.4s, filter 0.4s;
+      filter: brightness(0.85);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      filter: brightness(1.05);
+    }
+
+    /* Featured big items */
+    .gallery .big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .gallery .wide {
+      grid-column: span 2;
+    }
+
+    /* ===== Footer - Flexbox ===== */
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      background: #15152b;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width:900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+
+      .gallery .big,
+      .gallery .wide {
+        grid-column: span 2;
+        grid-row: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Lumière</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Visual Stories</h1>
+    <p>A curated collection of breathtaking moments, captured in a sleek grid layout powered by Flexbox and CSS Grid.
+    </p>
+  </section>
+
+  <section class="gallery">
+    <img class="big" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=600&fit=crop"
+      alt="Mountain">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=300&fit=crop" alt="Forest">
+    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=300&h=300&fit=crop" alt="Dog">
+    <img class="wide" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=300&fit=crop"
+      alt="Flower field">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&h=300&fit=crop" alt="Beach">
+    <img src="https://images.unsplash.com/photo-1444212477490-ca407925329e?w=300&h=300&fit=crop" alt="Animal">
+    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300&h=300&fit=crop" alt="Lake">
+    <img src="https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=300&h=300&fit=crop" alt="Snow">
+  </section>
+
+  <footer>
+    &copy; 2026 Lumière Gallery. All rights reserved.
+  </footer>
+
+</body>
+
+</html>

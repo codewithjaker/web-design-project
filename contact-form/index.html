@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form | Tailwind Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-lg w-full mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800">Get in touch</h2>
+            <p class="text-gray-500 mt-1">We'll get back to you within 2 hours</p>
+        </div>
+
+        <!-- Form -->
+        <form class="space-y-5">
+            <!-- Name Field -->
+            <div class="relative">
+                <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" placeholder="Your full name"
+                    class="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 outline-none transition">
+            </div>
+
+            <!-- Email Field -->
+            <div class="relative">
+                <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="email" placeholder="you@example.com"
+                    class="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 outline-none transition">
+            </div>
+
+            <!-- Subject Field -->
+            <div class="relative">
+                <i class="fas fa-tag absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" placeholder="Subject (optional)"
+                    class="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 outline-none transition">
+            </div>
+
+            <!-- Message Field -->
+            <div class="relative">
+                <i class="fas fa-message absolute left-4 top-5 text-gray-400"></i>
+                <textarea rows="5" placeholder="Your message..."
+                    class="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 outline-none transition resize-none"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors shadow-md flex items-center justify-center gap-2">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+
+        <!-- Alternative contact -->
+        <p class="text-center text-sm text-gray-400 mt-6">
+            Or email us directly at
+            <a href="mailto:support@learnable.com" class="text-indigo-600 underline">support@learnable.com</a>
+        </p>
+    </div>
+
+</body>
+
+</html>

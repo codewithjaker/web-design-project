@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learnable - Master Modern Skills Online</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-white text-gray-800 scroll-smooth">
+
+  <!-- ===================== 1. RESPONSIVE NAVBAR ===================== -->
+  <nav class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold text-indigo-600 tracking-wide">Learnable</a>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+        <a href="#hero" class="hover:text-indigo-600 transition-colors">Home</a>
+        <a href="#features" class="hover:text-indigo-600 transition-colors">Features</a>
+        <a href="#pricing" class="hover:text-indigo-600 transition-colors">Pricing</a>
+        <a href="#blog" class="hover:text-indigo-600 transition-colors">Blog</a>
+        <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+      </div>
+      <!-- Mobile Menu Toggle (checkbox hack) -->
+      <div class="md:hidden">
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <label for="menu-toggle" class="cursor-pointer text-gray-700 hover:text-indigo-600 transition-colors">
+          <i class="fas fa-bars text-2xl"></i>
+        </label>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden absolute top-full left-0 w-full bg-white shadow-md peer-checked:block hidden">
+      <div class="flex flex-col items-center space-y-4 py-6 text-gray-700 font-medium">
+        <a href="#hero" class="hover:text-indigo-600 transition-colors">Home</a>
+        <a href="#features" class="hover:text-indigo-600 transition-colors">Features</a>
+        <a href="#pricing" class="hover:text-indigo-600 transition-colors">Pricing</a>
+        <a href="#blog" class="hover:text-indigo-600 transition-colors">Blog</a>
+        <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-16"> <!-- Offset for fixed navbar -->
+
+    <!-- ===================== 2. HERO SECTION ===================== -->
+    <section id="hero" class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-white to-indigo-50">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        <div class="flex-1 text-center md:text-left space-y-6">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+            Master modern skills with <span class="text-indigo-600">Learnable</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto md:mx-0">
+            500+ courses on web development, data science, and design. Join 25,000+ learners and build career-ready projects.
+          </p>
+          <div class="flex gap-4 justify-center md:justify-start">
+            <a href="#contact" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-md">
+              Start Free Trial
+            </a>
+            <a href="#pricing" class="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+              View Pricing
+            </a>
+          </div>
+          <p class="text-sm text-gray-400 pt-2">No credit card required · Cancel anytime</p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
+            alt="Student learning online"
+            class="w-full max-w-lg mx-auto rounded-2xl shadow-2xl object-cover"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. FEATURE SECTION ===================== -->
+    <section id="features" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Why Learn with Learnable</h2>
+          <p class="mt-3 text-gray-500 text-lg">Everything you need to go from zero to job-ready</p>
+        </div>
+        <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Feature 1 -->
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="text-4xl text-indigo-500 mb-4"><i class="fas fa-video"></i></div>
+            <h3 class="text-xl font-bold text-gray-800">Self‑paced video courses</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">Over 500 hours of HD content with subtitles. Watch anytime, anywhere.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="text-4xl text-indigo-500 mb-4"><i class="fas fa-list-check"></i></div>
+            <h3 class="text-xl font-bold text-gray-800">Real‑world projects</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">Build a portfolio with 15+ guided projects reviewed by industry mentors.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="text-4xl text-indigo-500 mb-4"><i class="fas fa-comments"></i></div>
+            <h3 class="text-xl font-bold text-gray-800">24/7 expert support</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">Our teaching assistants reply within 4 hours. Live Q&A sessions every week.</p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="text-4xl text-indigo-500 mb-4"><i class="fas fa-graduation-cap"></i></div>
+            <h3 class="text-xl font-bold text-gray-800">Certificate of completion</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">Earn an industry-recognized certificate to share on LinkedIn and your resume.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. PRICING TABLE ===================== -->
+    <section id="pricing" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Choose Your Plan</h2>
+        <p class="text-gray-500 text-lg mb-12">Start free, upgrade anytime</p>
+        <div class="grid gap-8 grid-cols-1 md:grid-cols-3 items-center">
+          <!-- Basic -->
+          <div class="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-gray-800">Basic</h3>
+            <p class="text-gray-500 mt-2">For individuals</p>
+            <div class="mt-6 text-5xl font-extrabold text-gray-900">$19<span class="text-lg font-medium text-gray-500">/mo</span></div>
+            <ul class="mt-8 space-y-3 text-gray-700 text-left">
+              <li><i class="fas fa-check text-green-500 mr-2"></i> 5 Projects</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i> 10 GB Storage</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i> Basic Support</li>
+              <li><i class="fas fa-times text-red-400 mr-2"></i> <span class="text-gray-400">Analytics</span></li>
+            </ul>
+            <button class="mt-8 w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors">Get Started</button>
+          </div>
+          <!-- Pro (Highlighted) -->
+          <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl p-10 text-center text-white scale-105 z-10 relative hover:scale-110 transition-transform duration-300">
+            <span class="absolute top-0 right-0 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl tracking-wider">POPULAR</span>
+            <h3 class="text-2xl font-bold">Pro</h3>
+            <p class="text-indigo-100 mt-2">For professionals</p>
+            <div class="mt-6 text-5xl font-extrabold">$49<span class="text-lg font-medium text-indigo-200">/mo</span></div>
+            <ul class="mt-8 space-y-3 text-left">
+              <li><i class="fas fa-check text-green-300 mr-2"></i> Unlimited Projects</li>
+              <li><i class="fas fa-check text-green-300 mr-2"></i> 100 GB Storage</li>
+              <li><i class="fas fa-check text-green-300 mr-2"></i> Priority Support</li>
+              <li><i class="fas fa-check text-green-300 mr-2"></i> Advanced Analytics</li>
+            </ul>
+            <button class="mt-8 w-full bg-white text-indigo-600 font-semibold py-3 rounded-lg hover:bg-gray-100 transition-colors">Get Started</button>
+          </div>
+          <!-- Enterprise -->
+          <div class="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition-shadow">
+            <h3 class="text-2xl font-bold text-gray-800">Enterprise</h3>
+            <p class="text-gray-500 mt-2">For teams</p>
+            <div class="mt-6 text-5xl font-extrabold text-gray-900">$99<span class="text-lg font-medium text-gray-500">/mo</span></div>
+            <ul class="mt-8 space-y-3 text-gray-700 text-left">
+              <li><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Projects</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i> 500 GB Storage</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i> 24/7 Support</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i> Custom Analytics</li>
+            </ul>
+            <button class="mt-8 w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. TESTIMONIAL SECTION ===================== -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">What Our Clients Say</h2>
+        <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Review 1 -->
+          <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Client" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-indigo-200">
+            <div class="flex gap-1 text-yellow-400 mb-4">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">“Tailwind CSS has completely transformed my workflow. The utility-first approach is a game-changer for rapid prototyping.”</p>
+            <p class="font-bold text-gray-800">Rafiq Ahmed</p>
+            <p class="text-gray-500 text-sm">CEO, TechStart</p>
+          </div>
+          <!-- Review 2 -->
+          <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Client" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-indigo-200">
+            <div class="flex gap-1 text-yellow-400 mb-4">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">“I love how easy it is to build responsive designs without leaving my HTML. Highly recommended!”</p>
+            <p class="font-bold text-gray-800">Fatema Tuz</p>
+            <p class="text-gray-500 text-sm">Product Designer</p>
+          </div>
+          <!-- Review 3 -->
+          <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="Client" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-indigo-200">
+            <div class="flex gap-1 text-yellow-400 mb-4">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">“The developer experience is unmatched. Pairing Tailwind with a component framework is incredibly powerful.”</p>
+            <p class="font-bold text-gray-800">Kamal Hossain</p>
+            <p class="text-gray-500 text-sm">Full‑Stack Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. IMAGE GALLERY ===================== -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Explore the Learnable Campus</h2>
+        <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <!-- Repeat 8 images with hover overlay -->
+          <div class="relative group overflow-hidden rounded-xl">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop" alt="Campus" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+              <i class="fas fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-xl">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop" alt="Mountains" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+              <i class="fas fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-xl">
+            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=400&h=300&fit=crop" alt="Forest" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+              <i class="fas fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-xl">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&h=300&fit=crop" alt="Aurora" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+              <i class="fas fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-xl">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop" alt="Santorini" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+              <i class="fas fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-xl">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop" alt="Sunlight" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+              <i class="fas fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-xl">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Valley" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+              <i class="fas fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-xl">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop" alt="Lake" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+              <i class="fas fa-magnifying-glass-plus text-white text-3xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7. BLOG PREVIEW CARDS ===================== -->
+    <section id="blog" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Latest Articles</h2>
+        <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
+          <!-- Blog Card 1 -->
+          <a href="#" class="block bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=300&fit=crop" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6">
+              <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Technology</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors line-clamp-2">How Tailwind CSS Simplifies Your Workflow</h3>
+              <p class="text-gray-500 text-sm mt-2">June 15, 2026 · 5 min read</p>
+              <p class="text-gray-600 mt-3 text-sm leading-relaxed line-clamp-3">Discover how utility-first CSS can speed up your development and keep your styles consistent.</p>
+              <div class="flex items-center mt-5 pt-4 border-t border-gray-200">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                <span class="ml-2 text-sm text-gray-700 font-medium">Naima Hasan</span>
+              </div>
+            </div>
+          </a>
+          <!-- Blog Card 2 -->
+          <a href="#" class="block bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=300&fit=crop" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6">
+              <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Design</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors line-clamp-2">10 UI Patterns Every Developer Should Know</h3>
+              <p class="text-gray-500 text-sm mt-2">June 8, 2026 · 7 min read</p>
+              <p class="text-gray-600 mt-3 text-sm leading-relaxed line-clamp-3">Master common UI patterns to build better user interfaces faster.</p>
+              <div class="flex items-center mt-5 pt-4 border-t border-gray-200">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                <span class="ml-2 text-sm text-gray-700 font-medium">Rafiq Ahmed</span>
+              </div>
+            </div>
+          </a>
+          <!-- Blog Card 3 -->
+          <a href="#" class="block bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=300&fit=crop" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6">
+              <span class="inline-block bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Career</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors line-clamp-2">How to Land Your First Developer Job in 2026</h3>
+              <p class="text-gray-500 text-sm mt-2">May 28, 2026 · 6 min read</p>
+              <p class="text-gray-600 mt-3 text-sm leading-relaxed line-clamp-3">Practical tips from industry experts to break into tech.</p>
+              <div class="flex items-center mt-5 pt-4 border-t border-gray-200">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                <span class="ml-2 text-sm text-gray-700 font-medium">Fatema Tuz</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 8. PROFILE CARDS (MEET OUR INSTRUCTORS) ===================== -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Meet Our Instructors</h2>
+        <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Instructor 1 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face" alt="Instructor" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-indigo-200 shadow-md">
+            <h2 class="mt-5 text-2xl font-bold text-gray-800">Alexa Rivera</h2>
+            <p class="text-indigo-500 font-medium mt-1">Full‑Stack Developer</p>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Crafting clean and user‑friendly web experiences since 2016. Loves coffee, clean code, and Tailwind CSS.</p>
+            <div class="flex justify-center gap-5 mt-6">
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-twitter fa-lg"></i></a>
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-linkedin-in fa-lg"></i></a>
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+          <!-- Instructor 2 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Instructor" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-indigo-200 shadow-md">
+            <h2 class="mt-5 text-2xl font-bold text-gray-800">Rafiq Ahmed</h2>
+            <p class="text-indigo-500 font-medium mt-1">Data Scientist</p>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Data enthusiast with 8 years of experience in machine learning and AI. Passionate about teaching complex topics simply.</p>
+            <div class="flex justify-center gap-5 mt-6">
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-twitter fa-lg"></i></a>
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-linkedin-in fa-lg"></i></a>
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+          <!-- Instructor 3 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face" alt="Instructor" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-indigo-200 shadow-md">
+            <h2 class="mt-5 text-2xl font-bold text-gray-800">Naima Hasan</h2>
+            <p class="text-indigo-500 font-medium mt-1">UI/UX Designer</p>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Designer and front‑end specialist. She believes great design starts with empathy and ends with pixel-perfect code.</p>
+            <div class="flex justify-center gap-5 mt-6">
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-twitter fa-lg"></i></a>
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-linkedin-in fa-lg"></i></a>
+              <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 9. CONTACT FORM ===================== -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
+      <div class="max-w-lg mx-auto px-4">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800">Get in touch</h2>
+            <p class="text-gray-500 mt-1">We'll get back to you within 2 hours</p>
+          </div>
+          <form class="space-y-5">
+            <div class="relative">
+              <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              <input type="text" placeholder="Your full name" class="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 outline-none transition">
+            </div>
+            <div class="relative">
+              <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              <input type="email" placeholder="you@example.com" class="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 outline-none transition">
+            </div>
+            <div class="relative">
+              <i class="fas fa-tag absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              <input type="text" placeholder="Subject (optional)" class="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 outline-none transition">
+            </div>
+            <div class="relative">
+              <i class="fas fa-message absolute left-4 top-5 text-gray-400"></i>
+              <textarea rows="5" placeholder="Your message..." class="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 outline-none transition resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors shadow-md flex items-center justify-center gap-2">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+          <p class="text-center text-sm text-gray-400 mt-6">
+            Or email us directly at <a href="mailto:support@learnable.com" class="text-indigo-600 underline">support@learnable.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== 10. FOOTER ===================== -->
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Learnable</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Our Team</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Courses</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Web Development</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Data Science</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">UI/UX Design</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Mobile Apps</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Support</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">FAQs</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Legal</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+          </ul>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-lg"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-lg"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-lg"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-lg"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-lg"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800">
+      <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm">
+        <p>&copy; 2026 Learnable Inc. All rights reserved.</p>
+        <a href="#hero" class="mt-2 md:mt-0 hover:text-white transition-colors flex items-center gap-1">
+          Back to top <i class="fas fa-arrow-up text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
